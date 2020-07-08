@@ -18,14 +18,14 @@ article.insertAdjacentHTML(`afterbegin`, buttonMarkup);
 // Select the button from the page
 const button = document.querySelector(`#jsforwp-like button`);
 
-// Get the latest number of votes
-updateLikeCount();
-
 // Add an event listener to the button on click
 button.addEventListener(`click`, vote);
 
+// Get the latest number of votes
+updateLikeCount();
+
 // Sends a vote via the WP REST API
-async function vote() {
+function vote() {
   // Check if has already voted
   if (!hasVoted()) {
     // Make HTTP Request to REST API
@@ -53,9 +53,9 @@ async function updateLikeCount() {
 
 // Get the number of votes for a post
 function getVotes() {
-  return fetch(
-    `http://js-for-wp.local/wp-json/likes/v1/${postID}`
-  ).then((response) => response.json());
+  return fetch(`http://js-for-wp.local/wp-json/likes/v1/${postID}`)
+    .then((response) => response.json())
+    .catch((error) => console.error(error));
 }
 
 // Get posts user has liked
