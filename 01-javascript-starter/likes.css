@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+}
+article.post {
+  max-width: 600px;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  margin: 2rem auto;
+}

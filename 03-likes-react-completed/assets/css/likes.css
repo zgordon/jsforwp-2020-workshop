@@ -1,0 +1,12 @@
+#jsforwp-like button {
+  margin: 20px auto 20px;
+  display: block;
+}
+
+#jsforwp-like button.voted {
+  opacity: 0.5;
+}
+#jsforwp-like button.voted:hover {
+  cursor: not-allowed;
+  text-decoration: none;
+}

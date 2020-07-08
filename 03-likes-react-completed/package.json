@@ -1,0 +1,18 @@
+{
+  "name": "jsforwp-likes-react",
+  "version": "1.0.0",
+  "description": "A React based like plugin for WordPress",
+  "main": "build/index.js",
+  "author": "zgordon",
+  "license": "GPL-2.0-only",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format:js": "wp-scripts format-js",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "12.1.0"
+  }
+}
