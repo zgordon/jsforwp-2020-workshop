@@ -3,10 +3,11 @@
   display: block;
 }
 
-#jsforwp-like button.voted {
+#jsforwp-like button:disabled {
   opacity: 0.5;
 }
-#jsforwp-like button.voted:hover {
+
+#jsforwp-like button:disabled:hover {
   cursor: not-allowed;
   text-decoration: none;
 }

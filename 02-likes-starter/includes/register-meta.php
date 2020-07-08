@@ -3,16 +3,16 @@
 function jsforwplikes_meta_box()
 {    
     add_meta_box(
-        'jsforwp_likes',       // Unique ID
-        'Likes',               // Meta box title
-        'jsforwp_likes_html',  // Content callback
+        'jsforwp_likes',       
+        'Likes',               
+        'jsforwp_likes_markup',
         'post',
         'side'
     );    
 }
 add_action('add_meta_boxes', 'jsforwplikes_meta_box');
 
-function jsforwp_likes_html($post)
+function jsforwp_likes_markup($post)
 {
     $value = get_post_meta($post->ID, 'jsforwp_likes', true);
     if ( $value == null ) $value = 0;

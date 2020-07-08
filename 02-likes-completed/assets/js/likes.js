@@ -1,7 +1,7 @@
 const article = document.querySelector(`article.post`);
 const buttonMarkup = `
   <div  id="jsforwp-like">
-    <button class="secondary">
+    <button>
       Like ♡
       <span class="count"></span>
     </button>
@@ -12,7 +12,7 @@ updateLikeCount(jsforwp_likes.count);
 
 const button = document.querySelector(`#jsforwp-like button`);
 button.addEventListener(`click`, vote);
-if (hasVoted()) button.classList.add("voted");
+if (hasVoted()) button.disabled = "true";
 
 function vote() {
   if (!hasVoted()) {
@@ -27,7 +27,7 @@ function vote() {
           `jsforwp_likes`,
           JSON.stringify([...getVotes(), jsforwp_likes.postID])
         );
-        button.classList.add("voted");
+        button.disabled = "true";
       })
       .catch((error) => console.error(error));
   }

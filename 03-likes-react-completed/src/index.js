@@ -42,7 +42,7 @@ function LikeButton() {
   };
 
   return (
-    <button onClick={vote} className={hasVoted ? `voted` : ``}>
+    <button onClick={vote} disabled={hasVoted.toString()}>
       Like ♡<span class="count">{count}</span>
     </button>
   );
